@@ -3,9 +3,8 @@ var num;
 const arr = [1, 21, 3, 3, 7, 11, 5, 6, 9, 27];
 var largest;
 
-function firstLetterName() {
-    let name = fName;
-    alert("The name " + name + " starts with the letter " + name[0] + ".")
+function firstLetterName(string) {
+    alert("The name " + string + " starts with the letter " + string[0] + ".")
 }
 
 function divisibleByTwo(num) {
@@ -16,20 +15,20 @@ function divisibleByTwo(num) {
     }
 }
 
-function largestNum() {
-    for (let i = 0; i < arr.length; i++) {
-        for (let j = i + 1; j < arr.length; j++) {
-            if (arr[i] > arr[j]) {
-                largest = arr[i]
-                arr[i] = arr[j]
-                arr[j] = largest
+function largestNum(array) {
+    for (let i = 0; i < array.length; i++) {
+        for (let j = i + 1; j < array.length; j++) {
+            if (array[i] > array[j]) {
+                largest = array[i]
+                array[i] = array[j]
+                array[j] = largest
             }
         }
     }
-    console.log(arr)
+    console.log(array)
 }
 
-firstLetterName();
+firstLetterName(fName);
 divisibleByTwo(3);
 divisibleByTwo(6);
-largestNum();
+largestNum(arr);
